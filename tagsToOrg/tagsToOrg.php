@@ -7,7 +7,7 @@ $write_file_path = "write.org";
 // 为了匹配 ("\\CrossClanBattleGuild".
 $pattern1 = "/\(\"\\\\\\\\[a-z]+\"\./i";
 // 匹配单词
-$pattern2 = "/[a-z]+/i";
+$pattern2 = "/[a-z_]+/i";
 // 查看是否存在要读取得文件
 if(!file_exists($read_file_path))
 {
