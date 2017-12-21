@@ -30,16 +30,16 @@ for($i = 0 ;$i<count($file_arr);$i++)
     if(!empty($matches11))
     {
         $str = preg_match($pattern2, $matches11[0], $matches12);
-        // 二级标题
-        fwrite($write_file, "*** " . $matches12[0]."\n");
+        // 四级标题
+        fwrite($write_file, "**** " . $matches12[0]."\n");
         continue;
     }
     // 输出函数
     $str = preg_match_all($pattern2, $file_arr[$i], $matches21);
     if($matches21[0][0] == "m")
     {
-        // 三级标题，增加TODO
-        fwrite($write_file,"**** TODO " . $matches21[0][1] . "\n");
+        // 五级标题，增加TODO
+        fwrite($write_file,"***** TODO " . $matches21[0][1] . "\n");
     }
 }
 
